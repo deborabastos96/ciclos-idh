@@ -1,0 +1,29 @@
+.wrapper {
+  position: fixed;
+  background-color: $color-white;
+  bottom: 3rem;
+  right: 3rem;
+  max-width: 35rem;
+  padding: 3rem;
+  border-radius: $box-border-radius;
+  box-shadow: $shadow-big;
+  text-align: center;
+  z-index: 999999;
+}
+
+.wrapper.hide {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.cookies p {
+  color: $color-grey-dark-1;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.cookies .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,172 @@
+.header {
+  background-image: linear-gradient(
+    to right,
+    $color-white 65%,
+    $color-primary 65%
+  );
+
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  min-height: 9.6rem;
+  padding: 2rem 4rem;
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+      to right,
+      $color-white 75%,
+      $color-primary 75%
+    );
+  }
+
+  @include respond(tab-port) {
+    gap: 2rem;
+  }
+
+  @include respond(tab-small) {
+    justify-content: space-between;
+    background-image: linear-gradient(to right, $color-white 100%);
+    position: relative;
+  }
+
+  &__sobre {
+    background-image: linear-gradient(to right, $color-primary-light-2 100%);
+  }
+
+  &__logo {
+    height: 5rem;
+    width: auto;
+    display: block;
+  }
+
+  &__curso {
+    @include respond(tab-land) {
+      background-image: linear-gradient(
+        to right,
+        $color-white 70%,
+        $color-primary 70%
+      );
+
+      gap: 2rem;
+    }
+
+    @include respond(tab-small) {
+      background-image: linear-gradient(to right, $color-white 100%);
+    }
+  }
+
+  &__nav {
+    width: 100%;
+    display: flex;
+
+    &-1 {
+      margin-right: auto;
+      align-self: center;
+    }
+
+    @include respond(tab-small) {
+      background-color: rgba($color-primary, 0.9);
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25rem;
+      height: 100vh;
+      transform: translateX(100%);
+      padding: 12rem 4rem;
+
+      flex-direction: column;
+      gap: 3rem;
+      align-items: flex-start;
+      justify-content: flex-start;
+      transition: all 0.5s ease-in;
+
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      z-index: 999;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 4rem;
+
+    @include respond(tab-land) {
+      gap: 3rem;
+    }
+
+    @include respond(tab-small) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-grey-dark-3;
+      font-size: 1.7rem;
+      font-weight: 800;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary;
+    }
+
+    &-blue:link,
+    &-blue:visited {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $color-secondary-dark;
+
+      @include respond(tab-small) {
+        text-transform: capitalize;
+        color: $color-grey-dark-3;
+        font-weight: 800;
+      }
+    }
+
+    &-blue:hover,
+    &-blue:active {
+      color: $color-secondary;
+    }
+
+    &-cta:link,
+    &-cta:visited {
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 0.8rem 2rem;
+      border-radius: $default-border-radius;
+      color: $color-secondary-dark;
+      border: 1px solid $color-secondary-dark;
+
+      @include respond(tab-small) {
+        width: 17rem;
+        text-align: center;
+      }
+    }
+
+    &-cta:hover,
+    &-cta:active {
+      background-color: $color-secondary-dark;
+      color: $color-primary;
+    }
+  }
+
+  &__privacidade {
+    background-image: linear-gradient(to right, $color-white 100%);
+  }
+}

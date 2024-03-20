@@ -1,0 +1,173 @@
+.section-atuacao {
+  background-color: $color-white;
+  position: relative;
+  z-index: 2;
+}
+
+.atuacao {
+  border-radius: $box-border-radius;
+  box-shadow: $shadow-big;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95%;
+
+  &::before {
+    border-radius: $box-border-radius;
+  }
+
+  & div {
+    z-index: 2;
+  }
+
+  & p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    padding: 4rem 5rem 4rem 8rem;
+
+    @include respond(tab-land) {
+      padding: 4rem 0 4rem 8rem;
+    }
+
+    @include respond(tab-small) {
+      padding: 4rem 2rem 2rem 2rem;
+    }
+  }
+
+  &__img {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include respond(tab-small) {
+      position: relative;
+      width: 50%;
+      padding-bottom: 4rem;
+    }
+
+    &-box {
+      position: relative;
+    }
+  }
+}
+
+.section-missao {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    bottom: -180px;
+    right: -150px;
+    width: 33rem;
+    padding-bottom: 33rem;
+    border: 7px solid $color-secondary;
+  }
+
+  &::after {
+    bottom: -135px;
+    right: -115px;
+    width: 25rem;
+    padding-bottom: 25rem;
+    border: 4px solid $color-secondary;
+  }
+
+  @include respond(tab-land) {
+    &::before {
+      bottom: -170px;
+      right: -175px;
+      border: 6px solid $color-secondary;
+    }
+
+    &::after {
+      bottom: -125px;
+      right: -140px;
+      border: 3px solid $color-secondary;
+    }
+  }
+
+  @include respond(tab-port) {
+    &::before {
+      bottom: -90px;
+      right: -90px;
+      width: 23rem;
+      padding-bottom: 23rem;
+      border: 4px solid $color-secondary;
+    }
+
+    &::after {
+      bottom: -75px;
+      right: -80px;
+      width: 19rem;
+      padding-bottom: 19rem;
+      border: 2px solid $color-secondary;
+    }
+  }
+
+  @include respond(phone) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.missao {
+  &__img {
+    width: 100%;
+
+    @include respond(tab-small) {
+      width: 50%;
+    }
+
+    @include respond(phone) {
+      width: 75%;
+    }
+
+    &-box {
+      line-height: 0;
+
+      @include respond(tab-small) {
+        grid-row: 2;
+        text-align: center;
+      }
+
+      @include respond(phone) {
+        background-color: $color-white;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+
+  &__content {
+    text-align: right;
+    margin-top: 10rem;
+    padding-left: 12rem;
+
+    @include respond(notebook) {
+      padding-left: 10rem;
+    }
+
+    @include respond(tab-land) {
+      margin-top: 0;
+      padding-left: 5rem;
+    }
+
+    @include respond(tab-small) {
+      padding: 8rem 0 4rem 0;
+      text-align: left;
+    }
+
+    @include respond(phone) {
+      padding: 8rem 3.2rem 4rem 3.2rem;
+    }
+  }
+}

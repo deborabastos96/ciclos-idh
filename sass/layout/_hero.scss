@@ -1,0 +1,239 @@
+.section-hero {
+  background-image: linear-gradient(
+    to right,
+    $color-white 65%,
+    $color-primary 65%
+  );
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    bottom: -180px;
+    right: -150px;
+    width: 33rem;
+    padding-bottom: 33rem;
+    border: 7px solid $color-secondary;
+  }
+
+  &::after {
+    bottom: -135px;
+    right: -115px;
+    width: 25rem;
+    padding-bottom: 25rem;
+    border: 4px solid $color-secondary;
+  }
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+      to right,
+      $color-white 75%,
+      $color-primary 75%
+    );
+
+    &::before {
+      bottom: -170px;
+      right: -175px;
+      border: 6px solid $color-secondary;
+    }
+
+    &::after {
+      bottom: -125px;
+      right: -140px;
+      border: 3px solid $color-secondary;
+    }
+  }
+
+  @include respond(tab-port) {
+    &::before {
+      bottom: -90px;
+      right: -90px;
+      width: 23rem;
+      padding-bottom: 23rem;
+      border: 4px solid $color-secondary;
+    }
+
+    &::after {
+      bottom: -75px;
+      right: -80px;
+      width: 19rem;
+      padding-bottom: 19rem;
+      border: 2px solid $color-secondary;
+    }
+  }
+
+  @include respond(tab-small) {
+    background-image: linear-gradient(to right, $color-white 100%);
+    position: relative;
+  }
+
+  &--sobre {
+    background-image: linear-gradient(to right, $color-primary-light-2 100%);
+
+    &::after,
+    &::before {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      top: 100%;
+      left: 70%;
+      transform: translate(-50%, -50%);
+      width: 63rem;
+      padding-bottom: 63rem;
+      border: 7px solid $color-secondary;
+    }
+
+    &::after {
+      width: 53rem;
+      padding-bottom: 53rem;
+      border: 4px solid $color-secondary;
+    }
+
+    @include respond(tab-land) {
+      &::after,
+      &::before {
+        width: 55rem;
+        padding-bottom: 55rem;
+        border: 6px solid $color-secondary;
+      }
+
+      &::after {
+        width: 45rem;
+        padding-bottom: 45rem;
+        border: 3px solid $color-secondary;
+      }
+    }
+
+    @include respond(tab-port) {
+      &::after,
+      &::before {
+        width: 50rem;
+        padding-bottom: 50rem;
+        border: 4px solid $color-secondary;
+      }
+
+      &::after {
+        width: 40rem;
+        padding-bottom: 40rem;
+        border: 2px solid $color-secondary;
+      }
+    }
+
+    @include respond(tab-port) {
+      &::after,
+      &::before {
+        left: 50%;
+        width: 55rem;
+        padding-bottom: 55rem;
+        border: 4px solid $color-secondary;
+      }
+
+      &::after {
+        width: 45rem;
+        padding-bottom: 45rem;
+        border: 2px solid $color-secondary;
+      }
+    }
+  }
+
+  &--ensino {
+    &::after,
+    &::before {
+      display: none;
+    }
+  }
+
+  &--cursos {
+    height: 70rem;
+
+    @include respond(tab-small) {
+      height: auto;
+    }
+  }
+}
+
+.hero {
+  &__content {
+    margin-top: 5rem;
+    width: 48rem;
+
+    @include respond(tab-land) {
+      margin-top: 0;
+      align-self: center;
+    }
+
+    @include respond(tab-small) {
+      text-align: center;
+      width: 100%;
+      margin-top: 5rem;
+    }
+
+    & p {
+      margin-bottom: 2rem;
+      width: 80%;
+
+      @include respond(tab-small) {
+        width: 100%;
+      }
+    }
+
+    &--sobre {
+      width: 100%;
+      align-self: center;
+
+      & p {
+        width: 40rem;
+
+        @include respond(tab-small) {
+          width: 100%;
+        }
+      }
+
+      & h2 {
+        @include respond(tab-land) {
+          font-size: 3.8rem;
+        }
+
+        @include respond(tab-port) {
+          font-size: 3.6rem;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 85%;
+    transform: translateX(-8rem);
+    z-index: 120;
+    position: relative;
+
+    @include respond(tab-land) {
+      transform: translateX(-2rem);
+    }
+
+    @include respond(tab-small) {
+      transform: translateX(0);
+      width: 50%;
+    }
+
+    @include respond(phone) {
+      width: 75%;
+    }
+
+    &-box {
+      line-height: 0;
+
+      @include respond(tab-small) {
+        margin-top: 4rem;
+        text-align: center;
+      }
+    }
+
+    &--sobre {
+      transform: translateX(0);
+      margin-top: -3rem;
+    }
+  }
+}

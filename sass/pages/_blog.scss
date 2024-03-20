@@ -1,0 +1,33 @@
+.blog {
+  &__posts {
+    position: absolute;
+    top: -24.777rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    @include respond(tab-land) {
+      top: -23.1rem;
+      width: 82rem;
+    }
+
+    @include respond(tab-small) {
+      position: relative;
+      width: 100%;
+      top: 0;
+      padding-top: 6rem;
+    }
+  }
+}
+
+.section-blog-page {
+  min-height: 90rem;
+
+  @include respond(tab-land) {
+    min-height: 120rem;
+  }
+
+  @include respond(tab-small) {
+    min-height: 0;
+  }
+}

@@ -1,0 +1,62 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 35.625em) {
+      @content;
+    }
+  } //570px
+
+  @if $breakpoint == tab-small {
+    @media only screen and (max-width: 48.125em) {
+      @content;
+    }
+  } //770px
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  } //900px
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 72em) {
+      @content;
+    }
+  } //1150px
+
+  @if $breakpoint == notebook {
+    @media only screen and (max-width: 80em) {
+      @content;
+    }
+  } //1280px
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  } //1800px
+}
+
+@mixin arrows {
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: $default-border-radius;
+  background-color: $color-secondary !important;
+  box-shadow: $shadow-small;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: darken($color-secondary, 5%) !important;
+  }
+
+  & span {
+    display: block;
+    font-size: 5rem;
+    padding: 2rem;
+    padding-top: 1rem !important;
+    color: $color-grey-light-2;
+  }
+
+  @include respond(tab-land) {
+    top: 45%;
+  }
+}

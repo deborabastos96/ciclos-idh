@@ -1,0 +1,399 @@
+/* ENSINO */
+.section-ensinos {
+  background: linear-gradient(
+    90deg,
+    $color-rainbow-1 25%,
+    $color-rainbow-2 35%,
+    $color-rainbow-3 45%,
+    $color-rainbow-4 50%,
+    $color-rainbow-5 60%,
+    $color-rainbow-6 85%,
+    $color-rainbow-7 95%
+  );
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-white, 0.7);
+  }
+
+  & h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+  }
+
+  @include respond(tab-small) {
+    padding: 0 4rem;
+  }
+
+  & .ensino__content--left h3 {
+    font-size: 5rem;
+    margin-bottom: 0;
+
+    @include respond(tab-land) {
+      font-size: 4rem;
+      padding-bottom: 2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 3.6rem;
+      padding-bottom: 1rem;
+    }
+
+    @include respond(tab-small) {
+      padding-bottom: 4rem;
+    }
+  }
+
+  &--2 {
+    @include respond(tab-small) {
+      padding: 0;
+    }
+  }
+}
+
+.ensino-1 {
+  position: relative;
+  z-index: 100;
+}
+
+.ensino-2 {
+  z-index: 99;
+
+  &::after,
+  &::before {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    bottom: -180px;
+    left: -150px;
+    width: 33rem;
+    padding-bottom: 33rem;
+    border: 7px solid $color-white;
+  }
+
+  &::after {
+    bottom: -135px;
+    left: -115px;
+    width: 25rem;
+    padding-bottom: 25rem;
+    border: 4px solid $color-white;
+  }
+
+  @include respond(tab-land) {
+    &::before {
+      border: 6px solid $color-white;
+    }
+
+    &::after {
+      border: 3px solid $color-white;
+    }
+  }
+
+  @include respond(tab-port) {
+    &::before {
+      bottom: -100px;
+      left: -100px;
+      width: 23rem;
+      padding-bottom: 23rem;
+      border: 4px solid $color-white;
+    }
+
+    &::after {
+      bottom: -85px;
+      left: -90px;
+      width: 19rem;
+      padding-bottom: 19rem;
+      border: 2px solid $color-white;
+    }
+  }
+}
+
+/* SOBRE */
+.section-sobre {
+  @include respond(tab-small) {
+    padding-top: 6rem;
+  }
+}
+
+.sobre {
+  &__img {
+    width: 100%;
+    transform: translateY(-90px);
+    position: relative;
+    z-index: -1;
+
+    @include respond(tab-land) {
+      transform: translateY(-50px);
+    }
+
+    @include respond(tab-small) {
+      transform: translateY(0);
+      width: 80%;
+    }
+
+    &-box {
+      @include respond(tab-small) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 8rem;
+    width: 42rem;
+
+    @include respond(tab-small) {
+      justify-self: center;
+    }
+
+    & p {
+      margin-bottom: 3rem;
+    }
+
+    @include respond(tab-small) {
+      margin: 2rem 0 12rem 0;
+      width: 42rem;
+    }
+  }
+}
+
+/* CURSOS */
+.cursos {
+  display: flex;
+  gap: 2rem;
+
+  @include respond(tab-small) {
+    justify-self: center;
+  }
+
+  &__titles {
+    @include respond(tab-small) {
+      text-align: center !important;
+      grid-row: 1;
+    }
+  }
+
+  &__curso {
+    width: 22rem;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: $default-border-radius;
+    border: 1.8rem solid $color-secondary;
+
+    &-auricu {
+      border: 1.8rem solid $color-primary;
+    }
+
+    &-box {
+      line-height: 0;
+
+      @include respond(tab-small) {
+        grid-row: 1;
+      }
+    }
+
+    &-big {
+      width: 100%;
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    line-height: 1;
+    font-weight: 800;
+    background-color: $color-secondary-light;
+    margin: 0 2rem;
+    padding: 1rem 2rem;
+    border-radius: $box-border-radius;
+    box-shadow: $shadow-small;
+    transform: translateY(-5rem);
+
+    &-auricu {
+      background-color: $color-primary-light;
+    }
+  }
+
+  &__home {
+    border-radius: $box-border-radius;
+    box-shadow: $shadow-big;
+    overflow: hidden;
+    margin: 1rem 5rem 5rem 5rem;
+  }
+
+  &__content {
+    padding: 2rem 4rem 2rem 10rem;
+    position: relative;
+
+    @include respond(tab-land) {
+      padding: 2rem 0 2rem 6rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 2rem 0 2rem 5rem;
+    }
+
+    @include respond(tab-small) {
+      padding: 2rem 4rem 4rem 4rem;
+    }
+
+    & p {
+      margin-bottom: 4rem;
+
+      @include respond(tab-land) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    & .heading-primary {
+      @include respond(tab-land) {
+        font-size: 3.5rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 2.4rem;
+      }
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      bottom: -240px;
+      right: -210px;
+      width: 33rem;
+      padding-bottom: 33rem;
+      border: 7px solid $color-primary;
+    }
+
+    &::after {
+      bottom: -195px;
+      right: -175px;
+      width: 25rem;
+      padding-bottom: 25rem;
+      border: 4px solid $color-primary;
+    }
+
+    @include respond(tab-land) {
+      &::before {
+        bottom: -240px;
+        right: -210px;
+        border: 6px solid $color-primary;
+      }
+
+      &::after {
+        bottom: -195px;
+        right: -175px;
+        border: 3px solid $color-primary;
+      }
+    }
+
+    @include respond(tab-port) {
+      &::before {
+        bottom: -140px;
+        right: -140px;
+        width: 23rem;
+        padding-bottom: 23rem;
+        border: 4px solid $color-primary;
+      }
+
+      &::after {
+        bottom: -125px;
+        right: -130px;
+        width: 19rem;
+        padding-bottom: 19rem;
+        border: 2px solid $color-primary;
+      }
+    }
+
+    @include respond(tab-small) {
+      &::before {
+        top: 100%;
+        transform: translate(-40%, -50%);
+      }
+
+      &::after {
+        top: 100%;
+        transform: translate(-45%, -45%);
+      }
+    }
+  }
+}
+
+.carrossels {
+  position: relative;
+}
+
+.owl-nav {
+  font-size: 6rem;
+  line-height: 0.5;
+  color: $color-primary-dark;
+}
+
+.owl-next {
+  position: absolute;
+  right: 20px;
+  @include arrows;
+}
+
+.owl-prev {
+  position: absolute;
+  left: 20px;
+  @include arrows;
+}
+
+/* BLOG */
+.section-blog {
+  position: relative;
+  z-index: 2;
+  background-color: $color-white;
+}
+
+.post {
+  &__home {
+    & p {
+      color: $color-secondary-dark;
+    }
+
+    background-color: $color-secondary-light;
+    border-radius: $box-border-radius;
+    box-shadow: $shadow-big;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+
+    &-blog {
+      min-height: 24.777rem;
+
+      @include respond(tab-land) {
+        min-height: auto;
+      }
+    }
+  }
+
+  &__content {
+    padding: 2rem 4rem 3rem 4rem;
+  }
+}

@@ -1,0 +1,69 @@
+.section-post {
+  background-image: url(../../img/single-curso-cuidador-2x.jpg);
+  height: 60rem;
+  padding-top: 4rem;
+  background-size: cover;
+
+  @include respond(phone) {
+    height: 48rem;
+    padding-top: 2rem;
+  }
+
+  &-text {
+    & p:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(tab-small) {
+      margin-bottom: 8rem;
+    }
+  }
+
+  &-btn {
+    grid-column: span 2;
+  }
+
+  &-conteudo {
+    background-color: $color-white;
+    position: relative;
+    z-index: 2;
+
+    @include respond(tab-small) {
+      padding-bottom: 8rem;
+    }
+  }
+}
+
+.post {
+  &__single {
+    margin: 2rem 5.2rem 3rem 2rem;
+    box-shadow: $shadow-small;
+
+    @include respond(tab-small) {
+      margin: 2rem 2rem 3rem 2rem;
+    }
+  }
+}
+
+.owl-dots {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  margin: 0 5.2rem 4rem 2rem;
+
+  @include respond(tab-small) {
+    margin: 0 2rem 8rem 2rem;
+  }
+}
+
+.owl-dot {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: $default-border-radius;
+  background-color: $color-secondary-light !important;
+  color: $color-secondary;
+
+  &.active {
+    background-color: $color-secondary !important;
+  }
+}

@@ -1,0 +1,135 @@
+.contato {
+  position: relative;
+  z-index: 2;
+
+  padding: 8rem 0;
+
+  & p {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  &__form {
+    gap: 1.5rem;
+
+    &-box .newsletter__form::before {
+      display: none;
+    }
+
+    &-box .newsletter__form::after {
+      display: none;
+    }
+
+    &-campo {
+      display: flex;
+      justify-content: right;
+      gap: 2rem;
+    }
+
+    & label {
+      padding-top: 1rem;
+    }
+
+    & input {
+      text-align: left;
+      max-width: 50rem;
+      box-shadow: $shadow-small;
+
+      @include respond(phone) {
+        max-width: 28rem;
+      }
+    }
+
+    & select {
+      border-radius: $default-border-radius;
+      text-align: left;
+      min-width: 50rem;
+      border: none;
+      font-size: inherit;
+      font-family: inherit;
+      box-shadow: $shadow-small;
+      padding: 1.2rem 2rem;
+
+      @include respond(phone) {
+        min-width: 28rem;
+      }
+    }
+
+    & textarea {
+      border-radius: 2.8rem;
+      text-align: left;
+      min-width: 50rem;
+      border: none;
+      font-size: inherit;
+      font-family: inherit;
+      box-shadow: $shadow-small;
+      padding: 1.2rem 2rem;
+      height: 10rem;
+
+      @include respond(phone) {
+        min-width: 28rem;
+      }
+    }
+
+    &-box {
+      @include respond(tab-small) {
+        justify-self: center;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1rem;
+    line-height: 0;
+
+    @include respond(tab-small) {
+      margin-bottom: 4rem;
+      justify-content: center;
+    }
+
+    &-single {
+      padding: 1rem;
+      background-color: $color-secondary;
+      color: $color-secondary-light;
+      border-radius: $default-border-radius;
+      width: 2rem;
+      height: 2rem;
+
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $color-secondary-dark;
+      }
+    }
+  }
+
+  &__info {
+    @include respond(tab-small) {
+      text-align: center;
+    }
+  }
+}
+
+.section-map {
+  position: relative;
+  z-index: 2;
+  line-height: 0;
+
+  background: linear-gradient(
+    90deg,
+    $color-rainbow-1 25%,
+    $color-rainbow-2 35%,
+    $color-rainbow-3 45%,
+    $color-rainbow-4 50%,
+    $color-rainbow-5 60%,
+    $color-rainbow-6 85%,
+    $color-rainbow-7 95%
+  );
+}
+
+.map {
+  width: 100%;
+  height: 50rem;
+  opacity: 0.8;
+}

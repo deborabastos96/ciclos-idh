@@ -1,0 +1,47 @@
+// COLORS
+$color-primary: #75cdce;
+$color-primary-light: #daeaea;
+$color-primary-light-2: #bae6e5;
+$color-primary-dark: #0e3c3d;
+
+$color-secondary: #05499a;
+$color-secondary-light: #dae2ec;
+$color-secondary-lighter: #fafbfc;
+$color-secondary-dark: #021d3e;
+
+$color-rainbow-1: #8e368d;
+$color-rainbow-2: #ae385b;
+$color-rainbow-3: #d4473d;
+$color-rainbow-4: #eb7a3f;
+$color-rainbow-5: #e3ba50;
+$color-rainbow-6: #84be61;
+$color-rainbow-7: #81c3ac;
+
+$color-grey-light-1: #f2f2f2;
+$color-grey-light-2: #ddd;
+$color-grey-light-3: #bbb;
+
+$color-grey-dark-1: #999;
+$color-grey-dark-2: #777;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+
+//FONT
+$default-font-size: 1.6rem;
+
+//GRID
+$gutter-vertical: 9.6rem;
+$gutter-vertical-small: 6.4rem;
+$gutter-horizontal: 6.4rem;
+
+//SHADOW
+$shadow-small: 0 1rem 2rem rgba($color-black, 0.12);
+$shadow-hover: 0 1rem 2rem rgba($color-black, 0.2);
+$shadow-click: 0 0.5rem 1rem rgba($color-black, 0.2);
+$shadow-big: 0 2.4rem 4.8rem rgba($color-black, 0.075);
+
+//BORDER RADIUS
+$default-border-radius: 100rem;
+$box-border-radius: 5rem;

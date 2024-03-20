@@ -1,0 +1,108 @@
+.ensino {
+  position: relative;
+  z-index: 2;
+
+  & p {
+    width: 40rem;
+    margin: 0 auto;
+
+    @include respond(phone) {
+      max-width: 30rem;
+    }
+  }
+
+  &__img {
+    height: 36rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    &--right {
+      left: 100%;
+      transform: translate(-100%, -50%);
+    }
+
+    &-blog {
+      top: 35%;
+
+      @include respond(tab-small) {
+        top: 50%;
+      }
+    }
+  }
+
+  &s__img {
+    margin-top: -18rem;
+    position: relative;
+    z-index: 2;
+
+    &-2 {
+      width: 90%;
+      margin-top: -20rem;
+      transform: scale(1.2);
+
+      @include respond(tab-land) {
+        margin-top: -16rem;
+      }
+
+      @include respond(tab-small) {
+        transform: scale(1.1);
+        width: 60%;
+      }
+
+      @include respond(phone) {
+        width: 85%;
+      }
+    }
+
+    &-3 {
+      width: 80%;
+      margin-top: -20rem;
+
+      @include respond(tab-small) {
+        width: 45%;
+      }
+
+      @include respond(phone) {
+        width: 65%;
+      }
+    }
+
+    @include respond(tab-small) {
+      margin-top: 2rem;
+    }
+  }
+
+  &__content {
+    text-align: right;
+    margin-top: 4rem;
+    margin-left: 14rem;
+
+    @include respond(tab-land) {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    @include respond(tab-small) {
+      text-align: left;
+    }
+
+    &--left {
+      text-align: left;
+      margin-right: 14rem;
+      position: relative;
+      z-index: 2;
+
+      @include respond(tab-land) {
+        margin-right: 0;
+      }
+    }
+
+    &--3 {
+      @include respond(phone) {
+        padding: 0 3.2rem 0 3.2rem;
+      }
+    }
+  }
+}

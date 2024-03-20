@@ -1,0 +1,231 @@
+.container {
+  max-width: 130rem;
+  padding: 10rem 3.2rem 0 3.2rem;
+  margin: 0 auto;
+
+  @include respond(tab-small) {
+    padding: 4rem 3.2rem 0 3.2rem;
+  }
+
+  &__hero {
+    padding: 6rem 3.2rem 0 3.2rem;
+
+    @include respond(tab-land) {
+      padding: 0 3.2rem 0 3.2rem;
+    }
+
+    &--sobre {
+      padding: 0 3.2rem;
+    }
+
+    &--ensino {
+      padding: 12rem 3.2rem;
+      max-width: 80rem;
+    }
+
+    &--cursos {
+      padding: 12rem 3.2rem;
+    }
+  }
+
+  &__smaller {
+    padding: 9.6rem 3.2rem 8rem 3.2rem;
+    max-width: 100rem;
+  }
+
+  &__cursos {
+    padding: 3.6rem 3.2rem 10rem 3.2rem;
+
+    @include respond(tab-small) {
+      padding: 3.6rem 3.2rem 4rem 3.2rem;
+    }
+
+    &-page {
+      padding: 0 3.2rem 10rem 3.2rem;
+
+      max-width: 90rem;
+
+      @include respond(tab-small) {
+        padding: 8rem 3.2rem 8rem 3.2rem;
+      }
+    }
+  }
+
+  &__posts {
+    padding: 0 3.2rem 12rem 3.2rem;
+  }
+
+  &__newsletter {
+    padding: 8rem 17rem 6rem 17rem;
+
+    @include respond(tab-land) {
+      padding: 8rem 12rem 6rem 17rem;
+    }
+
+    @include respond(phone) {
+      padding: 15rem 6rem 8rem 6rem;
+    }
+  }
+
+  &__missao {
+    padding: 20rem 3.2rem 0 3.2rem;
+
+    @include respond(phone) {
+      padding: 20rem 0 0 0;
+    }
+  }
+
+  &__atuacao {
+    padding: 14rem 3.2rem 10rem 3.2rem;
+
+    @include respond(tab-land) {
+      padding: 10rem 3.2rem 18rem 3.2rem;
+    }
+
+    &-2 {
+      padding: 0;
+    }
+  }
+
+  &__ensinos {
+    @include respond(phone) {
+      padding: 4rem 0 0 0;
+    }
+  }
+
+  &__curso {
+    padding: 3rem 0;
+
+    & p {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &__privacidade {
+    padding: 8rem 3.2rem;
+    max-width: 80rem;
+  }
+}
+
+.grid {
+  display: grid;
+  column-gap: $gutter-horizontal;
+  row-gap: $gutter-vertical;
+
+  @include respond(tab-small) {
+    row-gap: 2rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 9.6rem;
+  }
+
+  &--cursos:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  &--footer {
+    grid-template-columns: 1fr 0.5fr 1fr 2fr;
+
+    @include respond(tab-small) {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+  }
+
+  &--curso {
+    grid-template-columns: 65fr 35fr;
+    column-gap: 0;
+
+    @include respond(tab-land) {
+      grid-template-columns: 70fr 30fr;
+    }
+
+    @include respond(tab-small) {
+      grid-template-columns: 1fr;
+      row-gap: 0;
+    }
+  }
+
+  &--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+
+    &-newsletter {
+      column-gap: 14rem;
+
+      @include respond(tab-land) {
+        column-gap: 6rem;
+      }
+    }
+
+    @include respond(tab-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--2-cols-bigger {
+    grid-template-columns: 66% 33%;
+
+    @include respond(tab-small) {
+      display: block;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &--2-cols-smaller {
+    grid-template-columns: 1fr 1.5fr;
+
+    @include respond(tab-land) {
+      column-gap: 0;
+    }
+
+    @include respond(tab-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include respond(tab-small) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &--center-v {
+    align-items: center;
+  }
+
+  &--center-h {
+    justify-content: center;
+  }
+
+  &--center-h-i {
+    justify-items: center;
+  }
+
+  &--posts {
+    column-gap: 4rem;
+    row-gap: 5rem;
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+
+    &-blog {
+      @include respond(tab-land) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include respond(tab-small) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

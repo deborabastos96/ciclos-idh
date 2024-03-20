@@ -1,0 +1,21 @@
+.rainbow-box {
+  width: 100%;
+  height: 4rem;
+  background: linear-gradient(
+    90deg,
+    $color-rainbow-1 25%,
+    $color-rainbow-2 35%,
+    $color-rainbow-3 45%,
+    $color-rainbow-4 50%,
+    $color-rainbow-5 60%,
+    $color-rainbow-6 85%,
+    $color-rainbow-7 95%
+  );
+
+  position: relative;
+  z-index: 2;
+
+  &--sobre {
+    height: 30rem;
+  }
+}

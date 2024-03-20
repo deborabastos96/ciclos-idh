@@ -1,0 +1,31 @@
+@import "sass/abstracts/animations";
+@import "sass/abstracts/mixins";
+@import "sass/abstracts/variables";
+
+@import "sass/base/base";
+@import "sass/base/typography";
+@import "sass/base/utilities";
+
+@import "sass/components/blog";
+@import "sass/components/button";
+@import "sass/components/cookies";
+@import "sass/components/list";
+@import "sass/components/newsletter";
+@import "sass/components/rainbow-box";
+@import "sass/components/tabela";
+
+@import "sass/layout/footer";
+@import "sass/layout/grid";
+@import "sass/layout/header";
+@import "sass/layout/hero";
+@import "sass/layout/navigation";
+
+@import "sass/pages/blog";
+@import "sass/pages/contato";
+@import "sass/pages/cursos-single";
+@import "sass/pages/cursos";
+@import "sass/pages/ensino";
+@import "sass/pages/home";
+@import "sass/pages/posts";
+@import "sass/pages/privacidade";
+@import "sass/pages/sobre";

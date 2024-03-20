@@ -1,0 +1,9 @@
+.section-privacidade {
+  background-color: $color-white;
+  position: relative;
+  z-index: 2;
+
+  & p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}

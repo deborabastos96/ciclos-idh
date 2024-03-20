@@ -1,0 +1,235 @@
+.main__cursos-single {
+  & .heading-secondary {
+    @include respond(tab-small) {
+      margin-top: 6rem;
+    }
+  }
+
+  & .heading-secondary-news {
+    @include respond(tab-small) {
+      margin-top: 0;
+    }
+  }
+}
+
+.section-hero--curso {
+  position: relative;
+  overflow: hidden;
+
+  & .curso__price {
+    padding: 0 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tab-land) {
+      padding: 0 2rem;
+    }
+
+    @include respond(tab-small) {
+      padding: 0 4rem;
+      font-size: 3.2rem;
+    }
+
+    @include respond(phone) {
+      justify-content: center;
+    }
+
+    & .span_cuid {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    & .span_auri {
+      @include respond(tab-land) {
+        font-size: 4rem;
+      }
+
+      @include respond(tab-small) {
+        font-size: 2.4rem;
+      }
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+
+    &-box {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      & span:last-child {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        font-weight: 400;
+        max-width: 9rem;
+        text-align: left;
+      }
+    }
+  }
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+      to right,
+      $color-white 70%,
+      $color-primary 70%
+    );
+  }
+
+  @include respond(tab-small) {
+    background-image: linear-gradient(to right, $color-primary 100%);
+  }
+}
+
+.curso {
+  &__price {
+    display: flex;
+    position: absolute;
+    bottom: 22%;
+
+    @include respond(tab-small) {
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    &-box {
+      line-height: 0;
+      max-height: 53rem;
+      overflow: hidden;
+    }
+  }
+
+  &__info {
+    padding: 2rem 6rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @include respond(tab-land) {
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    @include respond(tab-small) {
+      padding: 4rem;
+    }
+
+    & li {
+      font-size: 2rem;
+
+      & .marker {
+        margin-top: 8px;
+
+        @include respond(tab-land) {
+          margin-top: 4px;
+        }
+      }
+
+      @include respond(tab-land) {
+        font-size: 1.8rem;
+      }
+    }
+
+    & .cursos-page__links {
+      margin-top: auto;
+      padding: 2rem 0;
+    }
+  }
+}
+
+.section-info {
+  & p:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+.conteudo {
+  &__modulo {
+    font-size: 3rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: #e6edf5;
+    border-radius: 3rem;
+    padding: 2rem 4rem;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.04);
+
+    @include respond(tab-small) {
+      font-size: 2.4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+    }
+
+    &-pointer {
+      cursor: pointer;
+
+      & .conteudo__modulo-icon {
+        &[name="remove-outline"] {
+          display: none;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    & span:last-child {
+      color: $color-secondary-dark;
+    }
+
+    & a:link,
+    & a:visited {
+      border: none;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-icon {
+      min-width: 3rem;
+    }
+  }
+
+  &__info {
+    display: none;
+    padding: 1rem 4rem 4rem 4rem;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 0.3s;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+
+  &-open {
+    & .conteudo__modulo-icon[name="remove-outline"] {
+      display: block;
+    }
+
+    & .conteudo__modulo-icon[name="add-outline"] {
+      display: none;
+    }
+  }
+}
+
+.section-info {
+  background-color: $color-white;
+  position: relative;
+  z-index: 2;
+}

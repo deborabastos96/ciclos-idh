@@ -1,0 +1,134 @@
+.section-cursos-page {
+  background-color: $color-white;
+  position: relative;
+  z-index: 2;
+}
+
+.cursos-page {
+  position: relative;
+  z-index: 2;
+  max-width: 70rem;
+  margin: 0 auto;
+
+  & p {
+    max-width: 40rem;
+    margin: 0 auto;
+  }
+
+  &__header {
+    position: relative;
+
+    & nav,
+    & a {
+      position: relative;
+      z-index: 2;
+    }
+
+    @include respond(tab-small) {
+      max-height: 9.6rem;
+    }
+
+    @include respond(tab-port) {
+      gap: 2rem;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    &-single {
+      width: 100%;
+    }
+
+    @include respond(tab-small) {
+      width: 150%;
+    }
+
+    @include respond(phone) {
+      width: 220%;
+    }
+
+    &-menu {
+      display: none;
+    }
+  }
+
+  &__single {
+    background-color: $color-secondary-light;
+    border-radius: 3rem;
+    overflow: hidden;
+    box-shadow: $shadow-big;
+    margin-top: -25.589rem;
+
+    @include respond(tab-small) {
+      margin-top: 0;
+    }
+  }
+
+  &__content {
+    padding: 3rem 4.2rem;
+    font-size: 1.8rem;
+
+    & h4 {
+      margin-bottom: 2rem;
+      line-height: 1.1;
+
+      @include respond(tab-land) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__item {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__price {
+    display: inline-block;
+    width: 100%;
+    background-color: $color-secondary;
+    color: $color-white;
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.marker {
+  min-width: 2rem;
+  height: 2rem;
+  margin-top: 3.5px;
+  border: 2px solid $color-secondary;
+  border-radius: $default-border-radius;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.1rem;
+    height: 1.1rem;
+    border: 1px solid $color-secondary;
+    border-radius: $default-border-radius;
+  }
+}

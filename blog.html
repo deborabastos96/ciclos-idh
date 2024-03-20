@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="O Ciclos - Instituto de Desenvolvimento Humano oferta cursos nos formatos presencial, hibrido e a distância dependendo do Curso."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="img/favicon-64px.png" />
+    <link rel="apple-touch-icon" href="img/favicon-180px.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+
+    <script defer src="js/script.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <title>Blog – Instituto de Desenvolvimento Humano</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="cookies">
+        <h4 class="heading-tertiary">Controle sua privacidade</h4>
+        <p>
+          Nosso site usa cookies para garantir que você tenha a melhor
+          experiência.
+        </p>
+        <div class="buttons">
+          <button class="item btn btn--cookies u-margin-right">Aceitar</button>
+          <a href="politica-de-privacidade.html" class="item link"
+            >Saiba mais</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <button onclick="topFunction()" class="btn--top" title="Voltar ao topo">
+      <ion-icon name="chevron-up-outline" class="btn--top-icon"></ion-icon>
+    </button>
+
+    <header class="header header__sobre">
+      <a href="index.html#">
+        <picture>
+          <source
+            srcset="img/logo-azul-1x.webp 1x, img/logo-azul-2x.webp 2x"
+            type="image/webp"
+          />
+          <source
+            srcset="img/logo-azul-1x.png 1x, img/logo-azul-2x.png 2x"
+            type="image/png"
+          />
+
+          <img
+            srcset="img/logo-azul-1x.png 1x, img/logo-azul-2x.png 2x"
+            class="header__logo"
+            alt="Logo Ciclos IDH"
+          />
+        </picture>
+      </a>
+
+      <nav class="header__nav">
+        <div class="header__nav-1">
+          <ul class="header__list">
+            <li>
+              <a
+                class="header__item"
+                href="index.html#"
+                title="Acessar a página inicial do site"
+                >Início</a
+              >
+            </li>
+            <li>
+              <a
+                class="header__item"
+                href="ensino.html"
+                title="Saber sobre os tipos de ensinos proporcionados pelo Ciclos IDH"
+                >Ensino</a
+              >
+            </li>
+            <li>
+              <a
+                class="header__item"
+                href="sobre-nos.html"
+                title="Saiba mais sobre nossa história"
+                >Sobre nós</a
+              >
+            </li>
+            <li>
+              <a
+                class="header__item"
+                href="cursos.html"
+                title="Confira nossos cursos oferecidos"
+                >Cursos</a
+              >
+            </li>
+            <li>
+              <a
+                class="header__item"
+                href="contato.html"
+                title="Veja nossas informações de contato, nos envie uma mensagem e tire suas dúvidas"
+                >Contato</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="header__list">
+            <li>
+              <a
+                class="header__item header__item-blue"
+                href="blog.html"
+                title="Fique por dentro das nossas notícias, informações e mais"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="header__item header__item-cta"
+                href="#"
+                title="Acesse o Ambiente Virtual de Aprendizagem"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button class="nav__mobile-btn">
+        <ion-icon class="nav__mobile-icon" name="menu-outline"></ion-icon>
+        <ion-icon class="nav__mobile-icon" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section
+        class="section-hero section-hero--sobre section-hero--ensino section-hero--cursos"
+      >
+        <div class="container container__hero--ensino">
+          <div class="ensino u-center-text">
+            <h2 class="heading-secondary">Fique por dentro</h2>
+            <h1 class="heading-primary">Portal de notícias</h1>
+            <p>
+              Amplie sua consciência, otimizando o autoconhecimento na área da
+              saúde.
+            </p>
+          </div>
+          <picture>
+            <source
+              srcset="img/ensino-bg-2-1x.webp 1x, img/ensino-bg-2-2x.webp 2x"
+              type="image/webp"
+            />
+            <source
+              srcset="img/ensino-bg-2-1x.png 1x, img/ensino-bg-2-2x.png 2x"
+              type="image/png"
+            />
+            <img
+              srcset="img/ensino-bg-2-1x.png 1x, img/ensino-bg-2-2x.png 2x"
+              class="ensino__img ensino__img-blog"
+              alt="Logo Ciclos IDH Arco-íris"
+            />
+          </picture>
+          <picture>
+            <source
+              srcset="img/ensino-bg-1-1x.webp 1x, img/ensino-bg-1-2x.webp 2x"
+              type="image/webp"
+            />
+            <source
+              srcset="img/ensino-bg-1-1x.png 1x, img/ensino-bg-1-2x.png 2x"
+              type="image/png"
+            />
+            <img
+              srcset="img/ensino-bg-1-1x.png 1x, img/ensino-bg-1-2x.png 2x"
+              class="ensino__img ensino__img--right ensino__img-blog"
+              alt="Logo Ciclos IDH Arco-íris"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <!-- POSTS -->
+      <section class="section-blog section-blog-page">
+        <div class="container container__posts blog__posts">
+          <div class="grid grid--3-cols grid--posts grid--posts-blog">
+            <div class="post__home">
+              <a
+                href="blog/lorem-ipsum-dolo-sit-amet.html"
+                title="Lorem ipsum dolo sit amet"
+              >
+                <picture>
+                  <source
+                    srcset="img/home-blog-1x.webp 1x, img/home-blog-2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    class="post__img post__img-blog"
+                    alt="Enfermeira com Idosos"
+                  /> </picture
+              ></a>
+              <div class="post__content">
+                <a
+                  href="blog/lorem-ipsum-dolo-sit-amet.html"
+                  title="Lorem ipsum dolo sit amet"
+                  class="link"
+                  ><h4 class="heading-quaternary">
+                    Lorem ipsum dolo sit amet
+                  </h4></a
+                >
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="post__home">
+              <a
+                href="blog/lorem-ipsum-dolo-sit-amet.html"
+                title="Lorem ipsum dolo sit amet"
+              >
+                <picture>
+                  <source
+                    srcset="img/home-blog-1x.webp 1x, img/home-blog-2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    class="post__img post__img-blog"
+                    alt="Enfermeira com Idosos"
+                  /> </picture
+              ></a>
+              <div class="post__content">
+                <a
+                  href="blog/lorem-ipsum-dolo-sit-amet.html"
+                  title="Lorem ipsum dolo sit amet"
+                  class="link"
+                  ><h4 class="heading-quaternary">
+                    Lorem ipsum dolo sit amet
+                  </h4></a
+                >
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="post__home">
+              <a
+                href="blog/lorem-ipsum-dolo-sit-amet.html"
+                title="Lorem ipsum dolo sit amet"
+              >
+                <picture>
+                  <source
+                    srcset="img/home-blog-1x.webp 1x, img/home-blog-2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    class="post__img post__img-blog"
+                    alt="Enfermeira com Idosos"
+                  /> </picture
+              ></a>
+              <div class="post__content">
+                <a
+                  href="blog/lorem-ipsum-dolo-sit-amet.html"
+                  title="Lorem ipsum dolo sit amet"
+                  class="link"
+                  ><h4 class="heading-quaternary">
+                    Lorem ipsum dolo sit amet
+                  </h4></a
+                >
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="post__home">
+              <a
+                href="blog/lorem-ipsum-dolo-sit-amet.html"
+                title="Lorem ipsum dolo sit amet"
+              >
+                <picture>
+                  <source
+                    srcset="img/home-blog-1x.webp 1x, img/home-blog-2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    class="post__img post__img-blog"
+                    alt="Enfermeira com Idosos"
+                  /> </picture
+              ></a>
+              <div class="post__content">
+                <a
+                  href="blog/lorem-ipsum-dolo-sit-amet.html"
+                  title="Lorem ipsum dolo sit amet"
+                  class="link"
+                  ><h4 class="heading-quaternary">
+                    Lorem ipsum dolo sit amet
+                  </h4></a
+                >
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="post__home">
+              <a
+                href="blog/lorem-ipsum-dolo-sit-amet.html"
+                title="Lorem ipsum dolo sit amet"
+              >
+                <picture>
+                  <source
+                    srcset="img/home-blog-1x.webp 1x, img/home-blog-2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    class="post__img post__img-blog"
+                    alt="Enfermeira com Idosos"
+                  /> </picture
+              ></a>
+              <div class="post__content">
+                <a
+                  href="blog/lorem-ipsum-dolo-sit-amet.html"
+                  title="Lorem ipsum dolo sit amet"
+                  class="link"
+                  ><h4 class="heading-quaternary">
+                    Lorem ipsum dolo sit amet
+                  </h4></a
+                >
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+
+            <div class="post__home">
+              <a
+                href="blog/lorem-ipsum-dolo-sit-amet.html"
+                title="Lorem ipsum dolo sit amet"
+              >
+                <picture>
+                  <source
+                    srcset="img/home-blog-1x.webp 1x, img/home-blog-2x.webp 2x"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    srcset="img/home-blog-1x.jpg 1x, img/home-blog-2x.jpg 2x"
+                    class="post__img post__img-blog"
+                    alt="Enfermeira com Idosos"
+                  /> </picture
+              ></a>
+              <div class="post__content">
+                <a
+                  href="blog/lorem-ipsum-dolo-sit-amet.html"
+                  title="Lorem ipsum dolo sit amet"
+                  class="link"
+                  ><h4 class="heading-quaternary">
+                    Lorem ipsum dolo sit amet
+                  </h4></a
+                >
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-center-text">
+            <a
+              href="blog.html"
+              class="btn"
+              title="Ver mais notícias e informações"
+              >Veja mais</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- RAINBOW, ARCO-ÍRIS -->
+      <section class="rainbow-box"></section>
+
+      <!-- CTA NEWSLETTER -->
+      <section class="section-newsletter">
+        <div
+          class="container container__newsletter grid grid--2-cols grid--2-cols-newsletter grid--center-v"
+        >
+          <div>
+            <h2 class="heading-secondary">Newsletter</h2>
+            <h3
+              class="heading-primary u-text-color-secondary-darken u-padding-bottom-none u-margin-bottom-small"
+            >
+              Fique por dentro
+            </h3>
+            <p>
+              Se cadastre no formulário ao lado para receber novidades da área
+              da saúde e do Ciclos IDH.
+            </p>
+          </div>
+          <div class="u-right-text">
+            <form class="newsletter__form" name="sign-up" netlify>
+              <div>
+                <input
+                  id="nome"
+                  type="text"
+                  placeholder="Nome"
+                  name="nome"
+                  required
+                />
+              </div>
+
+              <div>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="E-mail"
+                  name="email"
+                  required
+                />
+              </div>
+
+              <button class="btn btn--form">Inscreva-se</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="footer__logo-box">
+          <a href="index.html#">
+            <img
+              class="footer__logo"
+              alt="Logo Ciclos IDH"
+              src="img/logo-branca.png"
+            />
+          </a>
+        </div>
+
+        <nav>
+          <p class="footer__heading">redes</p>
+          <ul class="footer__nav">
+            <li>
+              <a
+                class="footer__link footer__link-social"
+                href="https://www.facebook.com/ciclosidh"
+                target="_blank"
+                title="Acessar Facebook do Ciclos IDH"
+                ><ion-icon name="logo-facebook" class="footer__icon"></ion-icon
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a
+                class="footer__link footer__link-social"
+                href="https://www.instagram.com/ciclosidh/"
+                target="_blank"
+                title="Acessar Instagram do Ciclos IDH"
+                ><ion-icon name="logo-instagram" class="footer__icon"></ion-icon
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                class="footer__link footer__link-social"
+                href="https://api.whatsapp.com/send?phone=5547991031219&text=Olá! Estava no site Ciclos IDH e gostaria de falar com vocês."
+                target="_blank"
+                title="Falar com o Ciclos IDH no Whatsapp"
+                ><ion-icon name="logo-whatsapp" class="footer__icon"></ion-icon
+                >Whatsapp</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <nav>
+          <p class="footer__heading">cursos</p>
+          <ul class="footer__nav">
+            <li>
+              <a
+                class="footer__link"
+                href="cursos/cuidador-de-idosos.html"
+                title="Saber mais sobre o curso Cuidador de Idosos"
+                >Cuidador de Idosos</a
+              >
+            </li>
+            <li>
+              <a
+                class="footer__link"
+                href="cursos/auriculoterapia-integrativa.html"
+                title="Saber mais sobre o curso Auriculoterapia Integrativa"
+                >Auriculoterapia Integrativa</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <nav>
+          <p class="footer__heading">contato</p>
+          <ul class="footer__nav">
+            <li>
+              <a
+                class="footer__link"
+                href="tel:+5547991031219."
+                title="Ligar para o Ciclos IDH"
+                ><span class="numbers">(47) 99103-1219</span></a
+              >
+            </li>
+            <li>
+              <a
+                class="footer__link"
+                href="mailto:ciclosidh@gmail.com"
+                title="Enviar e-mail para o Ciclos IDH"
+                >ciclosidh@gmail.com</a
+              >
+            </li>
+            <li>
+              <a
+                class="footer__link"
+                href="https://goo.gl/maps/hnf8XuMVGebL7FGM9"
+                target="_blank"
+                title="Ver onde fica o Ciclos IDH"
+                >Rua José Paulo da Silva, <span class="numbers">69</span> – Casa
+                <span class="numbers">2</span>, Box
+                <span class="numbers">17</span> – Centro – Itajaí</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="u-center-text">
+        <a
+          href="politica-de-privacidade.html"
+          class="footer__link footer__link-priv"
+          >Política de Privacidade e Termos de Uso</a
+        >
+        <p class="copy">
+          Copyright &copy; <span class="numbers year">2022</span>. Website
+          desenvolvido por novadev.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

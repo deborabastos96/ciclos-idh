@@ -1,0 +1,114 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: $default-font-size;
+
+    padding: 1.2rem 4.8rem;
+    border-radius: $default-border-radius;
+
+    display: inline-block;
+    transition: all 0.2s;
+
+    border: none;
+    cursor: pointer;
+    background-color: $color-secondary;
+    color: $color-grey-light-1;
+
+    box-shadow: $shadow-small;
+    z-index: 8;
+    position: relative;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-hover;
+    background-color: darken($color-secondary, 5%);
+  }
+
+  &:active,
+  &:focus {
+    transform: translateY(-1px);
+    box-shadow: $shadow-click;
+  }
+
+  &--outline:link,
+  &--outline:visited {
+    color: $color-secondary;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px $color-secondary;
+  }
+
+  &--outline:hover,
+  &--outline:active,
+  &--outline:focus {
+    background-color: $color-secondary;
+    color: $color-grey-light-1;
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  &--form {
+    width: 100%;
+    font-family: inherit;
+    padding: 1.2rem 2rem;
+    text-align: right;
+
+    &,
+    &:link,
+    &:visited {
+      box-shadow: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+
+    &-contato {
+      text-align: center;
+      max-width: 50rem;
+      margin-top: 1rem;
+
+      @include respond(phone) {
+        max-width: auto;
+        min-width: 28rem;
+      }
+    }
+  }
+
+  &--top {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    left: 3rem;
+    z-index: 888;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: $color-secondary;
+    color: $color-grey-light-2;
+    cursor: pointer;
+    padding: 0.9rem 1.2rem;
+    border-radius: $default-border-radius;
+    box-shadow: $shadow-small;
+
+    &-icon {
+      font-size: 2.8rem;
+    }
+  }
+
+  &--cookies:link,
+  &--cookies:visited {
+    box-shadow: none;
+  }
+
+  &--cookies:hover,
+  &--cookies:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+}
